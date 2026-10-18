@@ -1,0 +1,130 @@
+/* ══════════════════════════════════════════════════════
+   GigPitch AI Custom Styles & Animations
+   ══════════════════════════════════════════════════════ */
+
+/* Background Grid Overlay */
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
+
+/* Floating Ambient Orbs */
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.18;
+    pointer-events: none;
+    animation: orb-drift 22s ease-in-out infinite alternate;
+}
+
+.orb-1 {
+    width: 500px;
+    height: 500px;
+    background: #F5B726;
+    top: -150px;
+    right: -100px;
+}
+
+.orb-2 {
+    width: 450px;
+    height: 450px;
+    background: #E53927;
+    bottom: -150px;
+    left: -100px;
+    animation-delay: -7s;
+}
+
+.orb-3 {
+    width: 400px;
+    height: 400px;
+    background: #8BB2DE;
+    top: 40%;
+    left: 45%;
+    animation-delay: -14s;
+}
+
+@keyframes orb-drift {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(40px, -50px) scale(1.08); }
+    100% { transform: translate(-30px, 40px) scale(0.94); }
+}
+
+/* Preset Chips */
+.preset-chip {
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #cbd5e1;
+    transition: all 0.2s ease;
+}
+
+.preset-chip:hover {
+    background: rgba(245, 183, 38, 0.12);
+    border-color: rgba(245, 183, 38, 0.4);
+    color: #F5B726;
+    transform: translateY(-1px);
+}
+
+/* Streaming Blinking Cursor */
+.streaming-cursor::after {
+    content: '▋';
+    display: inline-block;
+    color: #F5B726;
+    margin-left: 2px;
+    animation: cursor-blink 0.8s step-end infinite;
+}
+
+@keyframes cursor-blink {
+    50% { opacity: 0; }
+}
+
+/* History Item Card */
+.history-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.history-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(245, 183, 38, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(245, 183, 38, 0.5);
+}
+
+/* Toast Active State */
+.toast-active {
+    transform: translate(-50%, 0) !important;
+    opacity: 1 !important;
+}
