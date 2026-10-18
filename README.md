@@ -11,6 +11,9 @@ Built for the **[Hacktoberfest 2026 Open-Source AI Challenge: Week 2 (Side Hustl
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688.svg)](https://fastapi.tiangolo.com)
 [![Model: Open--Weight](https://img.shields.io/badge/Model-Open--Weight-7928CA.svg)](https://groq.com)
+[![Deployed on Render](https://img.shields.io/badge/Deploy-Render-46E3B7.svg)](https://gigpitch-ai.onrender.com)
+
+👉 **Live Demo**: **[https://gigpitch-ai.onrender.com](https://gigpitch-ai.onrender.com)**
 
 ---
 
